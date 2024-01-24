@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Check Out</title>
+    <!--Icone link-->
+    <script src="https://kit.fontawesome.com/722e303770.js" crossorigin="anonymous"></script>
+
+    <!--Font Family-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+         body{
+          background-color:#FFF2F2;
+        }
+
+
+        .checkout{
+          background-color: #F2E2E2;
+          width: auto;
+          height: auto;
+          margin: 50px;
+        }
+
+        .checkout h1{
+          font-family: "Montserrat", sans-serif;
+          padding: 50px;
+        }
+
+        .address_letter{
+          background-image: url(assignment_image/checkou_address.jpg);
+          background-size: cover;
+          height: 100px;
+          margin-left: 20px;
+          margin-right: 20px;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .name_phone{
+          margin-top: 30px;
+          margin-left: 60px
+        }
+
+        .address{
+          margin-top: 30px ;
+          margin-right: 100px;
+        }
+
+        .chekout_productOrdered{
+          margin-top: 40px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+
+        #productName{
+          margin-left: 20px;
+        }
+
+        .shipping_fee{
+          width: auto;
+          height: auto;
+        }
+        
+        .content{
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          padding: 30px;
+        }
+
+        .shipping_option{
+          display: flex;
+          padding-right: 40px;
+        }
+
+        .selectionshp, .shippingPrice, .shipping_option h5{
+          margin-right: 50px;
+        }
+
+        .selectionshp p{
+          font-size: 10px;
+          color: grey;
+        }
+
+        .totalAmount{
+          color: grey;
+          text-align: end;
+          padding: 30px;
+          margin-right: 40px;
+        }
+
+        .totalAmount span{
+          font-size: 40px;
+          color: #000000;
+          font-family: "Montserrat", sans-serif;
+          margin-left: 30px;
+        }
+
+        .choose{
+          display: flex;
+          justify-content: space-between;
+          padding: 20px;
+        }
+
+        .section1,.section2{
+          display: flex;
+        }
+
+        .payment_selection img{
+            width: 50px;
+            height: 30px;
+        }
+
+        .section1 h5, .section2 h5{
+          margin-right: 50px;
+        }
+
+        .section2 a{
+          padding-right: 50px;
+        }
+
+        .calculationPart{
+          display: flex;
+          padding: 30px;
+          padding-right: 80px;
+          justify-content: right;
+          align-items: center;
+        }
+
+        .amount_title{
+          margin-right: 40px;
+        }
+
+        .amount_number{
+          text-align: end;
+        }
+
+        .placeOrder{
+          text-align: end;
+          margin-right: 100px;
+        }
+      
+        .placeOrder button{
+          width: 300px;
+          height: 50px;
+          border-width: 1px;
+          background-color: #000000;
+          color: white;
+          font-family:'Slabo', serif;
+          font-size: 25px;
+        }
+
+        .Header {
+    background-color: #E5E0FF;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 5px 20px;
+}
+
+.right_content {
+    display: flex;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    width: 400px;
+    background-color: #7286D3;
+    border-radius: 20px 0 0 20px;
+    /* Rounded left corners */
+}
+
+.search_bar button {
+    background-color: #7286D3;
+    border-radius: 0 20px 20px 0;
+    /* Rounded right corners */
+    margin-left: -2px;
+    font-size: 15px;
+}
+
+.left_content a,
+.icons a {
+    font-size: 35px;
+}
+
+.search_bar {
+    margin-right: 100px;
+}
+
+.search_bar a {
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#search_btn {
+    background-color: #7286D3;
+}
+
+.icons a {
+    margin-right: 50px;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E5E0FF;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    display: none;
+}
+
+.paymentMethod img , .logisticPartner img{
+        width: 50px;
+        height: 30px;
+        background-color: white;
+        margin-bottom: 10px;
+    }
+
+    .footer{
+        background-color: #7286D3;
+    }
+
+    .box{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .left_content, .right_content{
+        display: flex;
+    }
+
+    .content a{
+        display: block;
+        color: black;
+        text-decoration: none;
+        font-size: 13px;
+        padding-bottom: 10px;
+    }
+
+    .content p, .paymentMethod p, .logisticPartner p{
+        font-size: 15px;
+        font-family: monospace;
+        text-decoration: underline;
+    }
+
+    #term_content{
+        background-color: #7286D3;
+        text-align: center;
+        font-family: 'Salsa', cursive;
+        font-size: 12px;
+        padding-bottom: 20px;
+    }
+
+    #special{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .content, .paymentMethod, .logisticPartner{
+        margin: 20px;
+    }
+
+/* mobile size */
+@media only screen and (max-width: 600px) {
+    .right_content {
+        display: none;
+    }
+
+    .left_content a {
+        font-size: 25px;
+    }
+
+    .menu {
+        float: right;
+        overflow: hidden;
+        display: block;
+    }
+
+    .menu i{
+        font-size: 25px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        z-index: 1;
+        flex-direction: column;
+        width: 100%;
+        top: 60px;
+        left: 0px;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .show {
+    display: block;
+    }
+
+
+    .paymentMethod,.logisticPartner {
+        display: none;
+    }
+
+}
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <!--Header-->
+    <div class="Header">
+        <div class="left_content">
+            <a href="homepage.html"><i class="fa-solid fa-house" style="color: #000000;"></i></a>
+        </div>
+
+        <div class="right_content">
+            <div class="search_bar">
+              <form action="#" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn my-2 my-sm-0" type="button" id="search_btn" onclick="submitForm()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+                <a href="userProfile.html">My Profile</a>
+                <a href="voucher.html">My Voucher</a>
+                <a href="orderhistory.html">Order History</a>
+                <a href="review.html">My Review</a>
+                <a href="wishlist.html">Wishlist</a>
+            </div>
+
+            <div class="icons">
+                <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
+                <a href="userProfile.html"><i class="fa-regular fa-circle-user" style="color: #000000;"></i></a></a>
+            </div>
+        </div>
+
+        <div class="menu">
+            <a onclick="myFunction()" class="dropbtn"><i class="fa-solid fa-bars" style="color: #000000;"></i></a>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="userProfile.html">My Profile</a>
+                <a href="voucher.html">My Voucher</a>
+                <a href="orderhistory.html">Order History</a>
+                <a href="review.html">My Review</a>
+                <a href="wishlist.html">Wishlist</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+                }
+            }
+    }
+
+    function submitForm() {
+            var searchInput = document.getElementById('searchInput').value;
+            alert('Search submitted!\nSearch Term: ' + searchInput);
+            // Add more logic for handling the search term as needed
+        }
+    </script>
+
+<!--address-->
+<div class="checkout">
+    <h1>Check Out</h1>
+    <div class="address_letter">
+        <div class="name_phone">
+            <h6>Subing</h6>
+            <h6>(+60) 1116993260</h6>
+        </div>
+        <div class="address">
+            <h6>1234, Jalan ABC 2/1, Taman Kajang, 43000, Kajang, Selangor</h6>
+        </div>
+    </div>
+
+    <!--product ordered-->
+    <div class="chekout_productOrdered">
+      <div class="container card-container">
+          <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="p-2 px-3 text-uppercase">PRODUCT</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="py-2 " style="margin-right: 25px;">Unit Price</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="py-2 " style="margin-right: 25px;">Quantity</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="py-2" style="margin-right: 25px;">Item Subtotal</div>
+                    </th>
+                  </tr>
+                </thead>
+
+                <!--Product 1-->
+                <tbody> 
+                  <tr>
+                    <th scope="row" class="border-0">
+                      <div class="p-2" id="product_content">
+                        <img src="assignment_image/dress (3).jpg" alt="" style="max-width: 100px;" class="img-fluid rounded shadow-sm">
+                        <div class="ml-3 d-inline-block align-middle">
+                          <p id="productName" class="mb-0">Women Sleeveless Strappy Summer Long Dress</p>
+                        </div>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle">RM 45.00</td>
+                    <td class="border-0 align-middle">2</td>
+                    <td class="border-0 align-middle">RM 90.00</td>
+                  </tr>
+                </tbody>
+
+              </table>
+          </div>
+      </div>
+    </div>
+
+      <!--selection and shipping fee-->
+      <div class="shipping_fee">
+        <div class="content">
+          <!--message box-->
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="inputPassword6" class="col-form-label">Messages</label>
+            </div>
+            <div class="col-auto">
+              <input type="text" id="" class="form-control">
+            </div>
+          </div>
+          <!--shipping method-->
+          <div class="shipping_option">
+              <h5>Shipping Option:</h5>
+              <div class="selectionshp">
+                  <h5>J&T Express</h5>
+                  <p>Receive by 08-08-2023</p>
+                  <a href="#">CHANGE</a>
+              </div>
+              <div class="shippingPrice">
+                <h6>RM 4.90</h6>
+              </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="totalAmount">
+          <p>Order Total: <span>RM 94.90</span></p>
+      </div>
+</div>
+
+<!--adding voucher and payment method-->
+<div class="checkout">
+    <div class="choose">
+        <div class="section1">
+          <h5>Payment Method: </h5>
+          <div class="payment_selection">
+              <button><img src="image/tng_image.png"></button>
+              <button><img src="image/fpx_image.png"></button>
+              <button><img src="image/masterCard_image.png"></button>
+              <button><img src="image/myBank_image.png"></button>
+              <button><img src="image/applyPay_image.png"></button>
+              <button><img src="image/visa_image.png"></button>
+          </div>
+        </div>
+        <div class="section2">
+            <h5>Store Voucher</h5>
+            <a href="voucher.html">SELECT VOUCHER</a>
+        </div>
+    </div>
+    <hr>
+    <div class="calculationPart">
+        <div class="amount_title">
+            <p>Merchandise Subtotal: </p>
+            <p>Shipping Fee: </p>
+            <p>Voucher: </p>
+            <p>Total Payment: </p>
+        </div>
+        <div class="amount_number">
+            <p>RM 90.00</p>
+            <p>RM 4.90</p>
+            <p>RM 10.00</p>
+            <h4>RM 84.90</h4>
+        </div>
+    </div>
+</div>
+<div class="placeOrder">
+  <button id="placeOrderBtn" type="button">Place Order</button>
+</div>
+
+
+
+  <!--Fotter-->
+  <div class="footer">
+    <div class="box">
+        <div class="left_content">
+            <div class="content">
+                <p>Category</p>
+                <a href="productDetails_Men.html">Men's Cloth</a>
+                <a href="productDetails_Women.html">Women's Cloth</a>
+            </div>
+
+            <div class="content">
+                <p>About Store</p>
+                <a href="voucher.html">Voucher</a>
+                <a href="">Promotion</a>
+            </div>
+
+            <div class="content">
+                <p>Customer Info</p>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="return.html">Return & Refund</a>
+                <a href="">Customer Service</a>
+            </div>
+        </div>
+
+        <div class="right_content">
+            <div class="paymentMethod">
+                <p>Payment Method</p>
+                <img src="image/fpx_image.png" alt="fpx">
+                <img src="image/visa_image.png" alt="visa">
+                <img src="image/applyPay_image.png" alt="applepay">
+
+                <div class="paymentMethod_special">
+                    <img src="image/tng_image.png" alt="tng">
+                    <img src="image/masterCard_image.png" alt="mastercard">
+                    <img src="image/myBank_image.png" >
+                </div>
+            </div>
+
+            <div class="logisticPartner">
+                <p>Logistics Partner</p>
+                    <img src="image/ninjaVan_image.png" alt="ninjavan">
+                    <img src="image/jtExpress_image.png" alt="JT_Express">
+                    <img src="image/poslaju_image.png" alt="poslaju">
+
+                <div class="logisticPartner_special">
+                        <img src="image/fedex_image.png" alt="fedex">
+                        <img src="image/dhl_image.png" alt="dhl">
+                </div>
+            </div>
+
+            <div class="content">
+                <p>Follow Us</p>
+                <a href="">Facebook</a>
+                <a href="">Instagram</a>
+                <a href="">Youtube</a>
+            </div>
+        </div>
+    </div>
+    <hr id="special">
+    <p id="term_content">Copyright 2023. Sunny Shop Mobile Malaysia Sdn. Bhd. [201501009497 (1134832-W)]. All Rights Reserved.</p>
+</div>
+
+<script>
+
+document.getElementById("placeOrderBtn").addEventListener("click", function() {
+  // Assuming you want to redirect to "homepage.html"
+  window.location.href = "myOrder.html";
+});
+
+  document.getElementById("placeOrderBtn").addEventListener("click", function() {
+    alert("Order placed successfully!");
+
+  });
+
+  // Function to handle the selection of payment methods
+  document.querySelectorAll(".payment_selection button").forEach(function(button) {
+    button.addEventListener("click", function() {
+      // Add logic to handle the selected payment method
+      var selectedPaymentMethod = button.querySelector("img").alt;
+      alert("Selected Payment Method: " + selectedPaymentMethod);
+ 
+    });
+  });
+
+  // Function to handle the selection of a voucher
+  document.querySelector(".section2 a").addEventListener("click", function(event) {
+    event.preventDefault(); 
+    // Add logic to handle the selection of a voucher
+    var selectedVoucher = prompt("Enter voucher code:");
+    if (selectedVoucher) {
+      alert("Selected Voucher: " + selectedVoucher);
+   
+    }
+  });
+
+</script>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

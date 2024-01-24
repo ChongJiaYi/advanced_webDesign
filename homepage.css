@@ -1,0 +1,181 @@
+body{
+    background-color:#FFF2F2;
+}
+
+
+
+.d-block{
+    width: auto;
+    height: 660px;
+}
+
+#carousel-caption1{
+    text-align: left;
+}
+
+#carousel-caption2{
+    text-align: right;
+    color: #000000;
+}
+
+#carousel-caption2 p{
+    margin-left: 400px;
+}
+
+.carousel-caption{
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+.carousel-caption button{
+    background-color: #313339;
+    height: 40px;
+    width: 100px;
+    border: 0px;
+    border-radius: 10px;
+    font-family:'Slabo', serif;
+    color: white;
+}
+
+.carousel-caption h5{
+    font-size: 70px;
+    font-family:'Slabo', serif;
+}
+
+
+.content_1{
+    display: flex;
+    margin-top: 20px;
+}
+
+#selectionImageFemale{
+    width: auto;
+    height: 400px;
+}
+
+#selectionImageMale{
+    width: auto;
+    height: 400px;
+}
+
+#maleCard{
+    margin-left: 20px;
+}
+
+#selection_text{
+    color: #000000;
+    text-decoration: none;
+}
+
+#shocking_text1{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.voucher{
+    display: flex;
+    background-color: black;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.col{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.vertical_line{
+    border: 1px solid rgba(255, 255, 255);
+    height: 100px;
+}
+
+
+.categories{
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.card-body button{
+    background-color: #313339;
+    height: 40px;
+    width: 100px;
+    border: 0px;
+    border-radius: 10px;
+    font-family:'Slabo', serif;
+    color: white;
+}
+
+.flashsale_image img{
+    width: auto;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.flashsale_text{
+    margin-top: 160px;
+}
+
+.flashsale_text h2 {
+    padding-bottom:20px ;
+    font-family: "Montserrat", sans-serif;
+    color: #8584849d;
+}
+
+#flashsale_text{
+    font-family: "Montserrat", sans-serif;
+    font-size: 35px;
+    padding-bottom: 20px;
+    color: #000000;
+}
+
+.flashsale_countdown{
+    margin-top: 100px;
+}
+
+.flashsale_countdown h5{
+    color: rgb(250, 95, 95);
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 20px;
+}
+
+.flashsale_countdown h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.flashsale_countdown button{
+    background-color: #000000;
+    height: 40px;
+    width: 120px;
+    border: 0px;
+    font-family:'Slabo', serif;
+    color: white;
+    margin-top: 20px;
+}
+
+
+
+.flashsale_timer{
+    display: flex;
+}
+
+.cd-item {
+    flex-basis: 150px;
+}
+
+.cd-item span{
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.cd-item p{
+    font-size: 15px;
+}
+
+

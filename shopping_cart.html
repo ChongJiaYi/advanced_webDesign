@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart</title>
+    <!--Icone link-->
+    <script src="https://kit.fontawesome.com/722e303770.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!--FontFamily-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Slabo+27px:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro:wght@400;700&display=swap">
+    <style>
+
+        body{
+          background-color:#FFF2F2;
+        }
+
+        .shopping_cart{
+            margin: 50px;
+            background-color: #F2E2E2;
+            width: auto;
+            height: auto;
+        }
+
+        .shopping_cart h1, .section_1 h1{
+          font-family: "Montserrat", sans-serif;
+          padding: 50px;
+        }
+
+        .cart_content{
+          display: flex;
+        }
+
+
+
+        .cart-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+        }
+
+        .product-list, .order_summary{
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .product-list img{
+          max-width: 100px;
+          margin-right: 20px;
+        }
+
+        .product_record h5{
+          width: 500px;
+        }
+
+        #product_content{
+          display: flex;
+        }
+
+        #productName{
+          margin-left: 20px;
+        }
+
+        h6{
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+        }
+
+        .price span{
+          font-size: 30px;
+        }
+
+        .cart_button{
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .cart_button button{
+          background-color: #000000;
+          height: 50px;
+          width: 150px;
+          border: 0px;
+          font-family:'Slabo', serif;
+          color: white;
+          margin-top: 50px;
+        }
+
+        #first{
+          margin-left: 70px;
+        }
+
+         #product_image{
+          width: auto;
+          height: 350px;
+        }
+
+
+        .Header {
+    background-color: #E5E0FF;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 5px 20px;
+}
+
+.right_content {
+    display: flex;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    width: 400px;
+    background-color: #7286D3;
+    border-radius: 20px 0 0 20px;
+    /* Rounded left corners */
+}
+
+.search_bar button {
+    background-color: #7286D3;
+    border-radius: 0 20px 20px 0;
+    /* Rounded right corners */
+    margin-left: -2px;
+    font-size: 15px;
+}
+
+.left_content a,
+.icons a {
+    font-size: 35px;
+}
+
+.search_bar {
+    margin-right: 100px;
+}
+
+.search_bar a {
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#search_btn {
+    background-color: #7286D3;
+}
+
+.icons a {
+    margin-right: 50px;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E5E0FF;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    display: none;
+}
+
+.paymentMethod img , .logisticPartner img{
+    width: 50px;
+    height: 30px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.footer{
+    background-color: #7286D3;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left_content, .right_content{
+    display: flex;
+}
+
+.content a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+.content p, .paymentMethod p, .logisticPartner p{
+    font-size: 15px;
+    font-family: monospace;
+    text-decoration: underline;
+}
+
+#term_content{
+    background-color: #7286D3;
+    text-align: center;
+    font-family: 'Salsa', cursive;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+#special{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.content, .paymentMethod, .logisticPartner{
+    margin: 20px;
+}
+
+
+/* mobile size */
+@media only screen and (max-width: 600px) {
+    .right_content {
+        display: none;
+    }
+
+    .left_content a {
+        font-size: 25px;
+    }
+
+    .menu {
+        float: right;
+        overflow: hidden;
+        display: block;
+    }
+
+    .menu i{
+        font-size: 25px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        z-index: 1;
+        flex-direction: column;
+        width: 100%;
+        top: 60px;
+        left: 0px;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .show {
+    display: block;
+    }
+
+
+    .paymentMethod,.logisticPartner {
+        display: none;
+    }
+
+}
+
+        
+        
+    </style>
+  </head>
+
+  <body>
+    <!--Header-->
+    <div class="Header">
+        <div class="left_content">
+            <a href="homepage.html"><i class="fa-solid fa-house" style="color: #000000;"></i></a>
+        </div>
+
+        <div class="right_content">
+            <div class="search_bar">
+                <form action="" class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn my-2 my-sm-0" type="submit" id="search_btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <a href="userProfile.html">My Profile</a>
+                <a href="voucher.html">My Voucher</a>
+                <a href="orderhistory.html">Order History</a>
+                <a href="review.html">My Review</a>
+                <a href="wishlist.html">Wishlist</a>
+            </div>
+
+            <div class="icons">
+                <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
+                <a href="userProfile.html"><i class="fa-regular fa-circle-user" style="color: #000000;"></i></a></a>
+            </div>
+        </div>
+
+        <div class="menu">
+            <a onclick="myFunction()" class="dropbtn"><i class="fa-solid fa-bars" style="color: #000000;"></i></a>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="userProfile.html">My Profile</a>
+                <a href="voucher.html">My Voucher</a>
+                <a href="orderhistory.html">Order History</a>
+                <a href="review.html">My Review</a>
+                <a href="wishlist.html">Wishlist</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+                }
+            }
+    }
+    </script>
+
+
+      <!--Shopping Cart-->
+      <div class="shopping_cart">
+        <h1>Your Cart</h1>
+            <div class="cart_content">
+                <div class="container card-container">
+                    <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col" class="border-0 bg-light">
+                                <div class="p-2 px-3 text-uppercase">PRODUCT</div>
+                              </th>
+                              <th scope="col" class="border-0 bg-light">
+                                <div class="py-2 " style="margin-right: 25px;">COLOR</div>
+                              </th>
+                              <th scope="col" class="border-0 bg-light">
+                                <div class="py-2 " style="margin-right: 25px;">SIZE</div>
+                              </th>
+                              <th scope="col" class="border-0 bg-light">
+                                <div class="py-2 " style="margin-right: 25px;">QUANTITY</div>
+                              </th>
+                              <th scope="col" class="border-0 bg-light">
+                                <div class="py-2" style="margin-right: 25px;">PRICE</div>
+                              </th>
+                              <th scope="col" class="border-0 bg-light">
+                                <div class="py-2" style="margin-right: 25px;">OPERATION</div>
+                              </th>
+                            
+                            </tr>
+                          </thead>
+
+                          <!--Product 1-->
+                          <tbody> 
+                            <tr>
+                              <th scope="row" class="border-0">
+                                <div class="p-2" id="product_content">
+                                  <img src="image/dress (3).jpg" alt="" style="max-width: 100px;" class="img-fluid rounded shadow-sm">
+                                  <div class="ml-3 d-inline-block align-middle">
+                                    <p id="productName" class="mb-0">Women Sleeveless Strappy Summer Long Dress</p>
+                                  </div>
+                                </div>
+                              </th>
+                              <td class="border-0 align-middle">White</td>
+                              <td class="border-0 align-middle">L</td>
+                              <td class="border-0 align-middle"><input type="number" id="quantity" value="2" min="1" max="10" /></td>
+                              <td class="border-0 align-middle">RM 90.00</td>
+                              <td class="border-0 align-middle">
+                                <button class="btn btn-danger btn-sm" onclick="removeItem(this)">Remove</button>
+                              </td>
+                            </tr>
+                          </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 pb-5" id="calculation">
+                  <div class="container card-container">
+                    <div class="order_summary">
+                        <div class="price">
+                            <h3>Total Price</h3>
+                            <div class="discount-container">
+                                <label for="discount-code">Discount Code:</label>
+                                <input type="text" id="discount-code" placeholder="Enter code">
+                                <button onclick="applyDiscount()">Apply</button>
+                              </div>
+                            <hr>
+                            <h6>Total Amount <span id="total-price">RM 150.00</span></h6>
+                        </div>
+                        <div class="cart_button">
+                          <a href="productDetails_Women.html"><button type="button">Continue Shopping</button></a>
+                          <a href="checkOut.html"><button type="button">Check Out</button></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+      <!--Shopping Cart End-->
+
+      <!--you may like too-->
+        <div class="more_product">
+            <div class="section_1">
+                <h1>You May Also Like</h1>
+            </div>
+        </div>
+
+        <div class="main_content">
+          <div class="row px-xl-5" style="margin: auto;">
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1" id="first">
+                <div class="card product-item border-0 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" id="product_image" src="image/flashsale_copy.jpg" alt="">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 style="height: 40px;">Women Sleeveless Strappy Summer Long Dress</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>RM50.00</h6>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="productDescriptions_Women_1.html" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        <a href="shopping_cart.html" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1" id="first">
+                <div class="card product-item border-0 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" id="product_image" src="image/dress.jpg" alt="">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 style="height: 40px;">Women Solid Butterfly Sleeve Belted Dress</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>RM50.00</h6>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="productDescriptions_Women_1.html" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        <a href="shopping_cart.html" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12" id="first">
+                <div class="card product-item border-0 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <img class="img-fluid w-100" id="product_image" src="image/cardigan.jpg" alt="">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-3 pt-4 pb-3">
+                        <h6 style="height: 40px;">Women Button Pattern Cardigan</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>RM45.90</h6>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="productDescriptions_Women_1.html" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        <a href="shopping_cart.html" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      <!--Footer-->
+      <div class="footer">
+        <div class="box">
+            <div class="left_content">
+                <div class="content">
+                    <p>Category</p>
+                    <a href="productDetails_Men.html">Men's Cloth</a>
+                    <a href="productDetails_Women.html">Women's Cloth</a>
+                </div>
+    
+                <div class="content">
+                    <p>About Store</p>
+                    <a href="voucher.html">Voucher</a>
+                    <a href="">Promotion</a>
+                </div>
+    
+                <div class="content">
+                    <p>Customer Info</p>
+                    <a href="wishlist.html">Wishlist</a>
+                    <a href="return.html">Return & Refund</a>
+                    <a href="">Customer Service</a>
+                </div>
+            </div>
+    
+            <div class="right_content">
+                <div class="paymentMethod">
+                    <p>Payment Method</p>
+                    <img src="image/fpx_image.png" alt="fpx">
+                    <img src="image/visa_image.png" alt="visa">
+                    <img src="image/applyPay_image.png" alt="applepay">
+    
+                    <div class="paymentMethod_special">
+                        <img src="image/tng_image.png" alt="tng">
+                        <img src="image/masterCard_image.png" alt="mastercard">
+                        <img src="image/myBank_image.png" >
+                    </div>
+                </div>
+    
+                <div class="logisticPartner">
+                    <p>Logistics Partner</p>
+                        <img src="image/ninjaVan_image.png" alt="ninjavan">
+                        <img src="image/jtExpress_image.png" alt="JT_Express">
+                        <img src="image/poslaju_image.png" alt="poslaju">
+    
+                    <div class="logisticPartner_special">
+                            <img src="image/fedex_image.png" alt="fedex">
+                            <img src="image/dhl_image.png" alt="dhl">
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <p>Follow Us</p>
+                    <a href="">Facebook</a>
+                    <a href="">Instagram</a>
+                    <a href="">Youtube</a>
+                </div>
+            </div>
+        </div>
+        <hr id="special">
+        <p id="term_content">Copyright 2023. Sunny Shop Mobile Malaysia Sdn. Bhd. [201501009497 (1134832-W)]. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        function removeItem(button) {
+        var row = button.closest('tr');
+        row.remove();
+        updateTotalPrice(); // Update total price after removing an item
+        }
+
+        function applyDiscount() {
+        var discountCode = document.getElementById("discount-code").value;
+        var totalPriceElement = document.getElementById("total-price");
+
+      
+        var discountPercentage = getDiscountPercentage(discountCode); 
+        var originalPrice = parseFloat(totalPriceElement.innerText.replace("RM", ""));
+        var discountedPrice = calculateDiscountedPrice(originalPrice, discountPercentage);
+
+        // Update the total price accordingly
+        totalPriceElement.innerText = "RM " + discountedPrice.toFixed(2);
+       }
+
+   
+      function getDiscountPercentage(code) {
+      if (code === "SAVE10") {
+     return 0.10; // 10% discount
+     } else {
+      return 0; // No discount for other codes
+     }
+     }
+
+       // Function to calculate discounted price
+        function calculateDiscountedPrice(originalPrice, discountPercentage) {
+        return originalPrice - originalPrice * discountPercentage;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          // Function to update total price based on quantity
+          function updateTotalPrice() {
+            var quantity = parseInt(document.getElementById("quantity").value);
+            var pricePerItem = 90.00; 
+            var totalPrice = quantity * pricePerItem;
+    
+            // Update the total price element
+            document.getElementById("total-price").innerText = "RM " + totalPrice.toFixed(2);
+          }
+    
+          // Attach the function to the quantity input change event
+          document.getElementById("quantity").addEventListener("input", updateTotalPrice);
+        });
+
+        
+      </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    
+
+  </body>
+</html>

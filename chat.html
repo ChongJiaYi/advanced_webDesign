@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/722e303770.js" crossorigin="anonymous"></script>
+
+    <title>Hello, world!</title>
+    <style>
+        
+        body{
+          background-color:#FFF2F2;
+        }
+
+
+
+        .container{
+            display: flex;
+        }
+
+
+        .openfororder{
+            margin-left: 600px;
+            margin-top: 25px;
+        }
+
+        .circle{
+            width: 15px;
+            height: 15px;
+            background-color: green;
+            border-radius: 50%;
+            margin-left: 40px;
+            margin-top: 30px;
+        }
+
+        .bellicon,.stafficon{
+
+            font-size: 50px;
+            margin-top: 0px;
+            margin-left: 40px;
+
+        }
+
+        .container1{
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .staffname{
+            margin-left: 30px;
+            margin-top: 6px;
+        }
+
+        .staffname p{
+            margin-top: 10px;
+        }
+
+        .line{
+            height: 1px;
+            width: 1310px;
+            background-color: black;
+            margin-left: 25px;
+        }
+
+
+
+
+        ul{
+            list-style-type: none;
+            margin-left: 0px;
+            width: 200px;
+            background-color: white;
+            margin-top: 50px;
+            padding: 0;
+            text-align: center;
+        }
+
+        li a{
+            display: block;
+            color: black;
+            text-decoration: none;
+            padding: 10px 16px;
+        
+         
+
+           
+        }
+
+        li a:hover{
+            background-color: #555;
+            color: white;
+        }
+
+        li i{
+            font-size: 25px;
+            margin-top: 5px;
+            width: 60px;
+            margin-left: -70px;
+        }
+
+        .greyrect{
+            width: 880px;
+            height: 530px;
+            background-color: rgb(202, 202, 202);
+            margin-left: 25px;
+            margin-top: 49px;
+        }
+
+        .searchbar1{
+
+            margin-left: 20px;
+            margin-top: 20px;
+            width: 200px;
+
+        }
+
+        input[type="search"]{
+            text-align: center;
+            border: none;
+            padding: 10px;
+            border-bottom: 1px solid black;
+        }
+
+        .chatlist{
+            margin-left: 20px;
+            margin-top: -50px;
+        }
+
+        .bigwhiterect{
+            width: 550px;
+            height: 468px;
+            background-color: white;
+            margin-left: 30px;
+            margin-top: 40px;
+        }
+
+        .customerA{
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .customericon{
+            margin-left: 10px;
+            font-size: 40px;
+        }
+
+        .customerline{
+            background-color: black;
+            height: 1px;
+            width: 550px;
+        }
+
+        .chatting1{
+            height: 40px;
+            width: 280px;
+            margin-top: 15px;
+            background-color: #9d9d9d;
+            margin-left: 15px;
+            border-radius: 40px;
+        }
+
+        .chatting2{
+            height: 40px;
+            width: 280px;
+            margin-top: 15px;
+            background-color: #d6c0c0;
+            margin-left: 200px;
+            border-radius: 40px;
+        }
+
+        input[type="text1"]{
+            margin-left: 10px;
+            margin-top: 120px;
+            width: 80%;
+            text-align: center;
+
+        }
+
+        .button{
+            width: 50px;
+            height: 35px;
+            background-color: rgb(187, 139, 232);
+            color: white;
+            margin-top: 120px;
+            margin-left: 20px;
+            text-decoration: none;
+            border: none;
+            display: inline-block;
+        }
+
+
+
+
+
+        .Header {
+    background-color: #E5E0FF;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 5px 20px;
+}
+
+.right_content {
+    display: flex;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    width: 400px;
+    background-color: #7286D3;
+    border-radius: 20px 0 0 20px;
+    /* Rounded left corners */
+}
+
+.search_bar button {
+    background-color: #7286D3;
+    border-radius: 0 20px 20px 0;
+    /* Rounded right corners */
+    margin-left: -2px;
+    font-size: 15px;
+}
+
+.left_content a,
+.icons a {
+    font-size: 35px;
+}
+
+.search_bar {
+    margin-right: 100px;
+}
+
+.search_bar a {
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#search_btn {
+    background-color: #7286D3;
+}
+
+.icons a {
+    margin-right: 50px;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E5E0FF;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    display: none;
+}
+
+.paymentMethod img , .logisticPartner img{
+    width: 50px;
+    height: 30px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.footer{
+    background-color: #7286D3;
+    margin-top: 30px;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left_content, .right_content{
+    display: flex;
+}
+
+.content a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+.content p, .paymentMethod p, .logisticPartner p{
+    font-size: 15px;
+    font-family: monospace;
+    text-decoration: underline;
+}
+
+#term_content{
+    background-color: #7286D3;
+    text-align: center;
+    font-family: 'Salsa', cursive;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+#special{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.content, .paymentMethod, .logisticPartner{
+    margin: 20px;
+}
+
+         /* mobile size */
+@media only screen and (max-width: 600px) {
+    .right_content {
+        display: none;
+    }
+
+    .left_content a {
+        font-size: 25px;
+    }
+
+    .menu {
+        float: right;
+        overflow: hidden;
+        display: block;
+    }
+
+    .menu i{
+        font-size: 25px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        z-index: 1;
+        flex-direction: column;
+        width: 100%;
+        top: 60px;
+        left: 0px;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .show {
+    display: block;
+    }
+
+
+    .paymentMethod,.logisticPartner {
+        display: none;
+    }
+    
+
+}
+
+
+        
+
+        
+      
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="Header">
+        <div class="left_content">
+            <a href="homepage.html"><i class="fa-solid fa-house" style="color: #000000;"></i></a>
+        </div>
+
+        <div class="right_content">
+            <div class="search_bar">
+                <form action="#" class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Search"
+                    aria-label="Search">
+                    <button class="btn my-2 my-sm-0" type="button" id="search_btn" onclick="submitForm()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <a href="userProfile.html">My Profile</a>
+                <a href="voucher.html">My Voucher</a>
+                <a href="orderhistory.html">Order History</a>
+                <a href="review.html">My Review</a>
+                <a href="wishlist.html">Wishlist</a>
+            </div>
+
+            <div class="icons">
+                <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
+                <a href="userProfile.html"><i class="fa-regular fa-circle-user" style="color: #000000;"></i></a></a>
+            </div>
+        </div>
+
+        <div class="menu">
+            <a onclick="myFunction()" class="dropbtn"><i class="fa-solid fa-bars" style="color: #000000;"></i></a>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="userProfile.html">My Profile</a>
+                <a href="voucher.html">My Voucher</a>
+                <a href="orderhistory.html">Order History</a>
+                <a href="review.html">My Review</a>
+                <a href="wishlist.html">Wishlist</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+                }
+            }
+    }
+
+    function submitForm() {
+            var searchInput = document.getElementById('searchInput').value;
+            alert('Search submitted!\nSearch Term: ' + searchInput);
+        }
+    </script>
+
+    <div class="container">
+
+        <div class="openfororder">
+            <p>Open For Order</p>
+        </div>
+
+        <div class="circle"></div>
+
+        <div class="bellicon">
+            <i class="fa-regular fa-bell" style="color: #000000;"></i>
+        </div>
+
+        <div class="stafficon">
+            <i class="fa-regular fa-circle-user" style="color: #b18cfe;"></i>
+        </div>
+
+        <div class="staffname">
+            <p>XXXXXX<br>Staff Admin</p>
+        </div>
+
+    </div>
+    
+    <div class="line"></div>
+
+    <div class="container">
+
+    <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#customer">Customer</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#stock">Stock</a></li>
+        <li><a href="#message">Message</a></li>
+        <li><a href="#trackorder">Track Order</a></li>
+    </ul>
+
+    <div class="greyrect">
+        <div class="container">
+            <div class="searchbar1">
+                <input type="search" class="searchbar1" placeholder="search">
+               
+
+                <div class="chatlist">
+
+                    <ul>
+                        <li><a href="#customera"><i class="fa-solid fa-circle-user"></i>Customer A</a></li>
+                        <li><a href="#customerb"><i class="fa-solid fa-circle-user"></i>Customer B</a></li>
+                        <li><a href="#customerc"><i class="fa-solid fa-circle-user"></i>Customer C</a></li>
+                        <li><a href="#customerd"><i class="fa-solid fa-circle-user"></i>Customer D</a></li>
+                        <li><a href="#customere"><i class="fa-solid fa-circle-user"></i>Customer E</a></li>
+                        <li><a href="#customerf"><i class="fa-solid fa-circle-user"></i>Customer F</a></li>
+                        <li><a href="#customerg"><i class="fa-solid fa-circle-user"></i>Customer G</a></li>
+                        <li><a href="#customerh"><i class="fa-solid fa-circle-user"></i>Customer F</a></li>
+                      
+                    </ul>
+                     </div>
+
+            </div>
+
+            <div class="bigwhiterect">
+                <div class="container">
+
+                    <div class="customericon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+
+                <div class="customerA">
+                    <h2>Customer A</h2>
+                </div>
+
+
+                </div>
+
+                <div class="customerline"></div>
+
+                <div class="container">
+                    <div class="customericon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+
+                    <div class="chatting1">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="chatting2">
+                    </div>
+
+                    <div class="customericon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="customericon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+
+                    <div class="chatting1">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="chatting2">
+                    </div>
+
+                    <div class="customericon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <input type="text1" class="message" placeholder="Type your message...">
+                   <button class="button">Send</button>
+                </div>
+
+
+            </div>
+
+            
+
+            
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+ 
+
+            
+    <div class="footer">
+        <div class="box">
+            <div class="left_content">
+                <div class="content">
+                    <p>Category</p>
+                    <a href="productDetails_Men.html">Men's Cloth</a>
+                    <a href="productDetails_Women.html">Women's Cloth</a>
+                </div>
+    
+                <div class="content">
+                    <p>About Store</p>
+                    <a href="voucher.html">Voucher</a>
+                    <a href="">Promotion</a>
+                </div>
+    
+                <div class="content">
+                    <p>Customer Info</p>
+                    <a href="wishlist.html">Wishlist</a>
+                    <a href="return.html">Return & Refund</a>
+                    <a href="">Customer Service</a>
+                </div>
+            </div>
+    
+            <div class="right_content">
+                <div class="paymentMethod">
+                    <p>Payment Method</p>
+                    <img src="image/fpx_image.png" alt="fpx">
+                    <img src="image/visa_image.png" alt="visa">
+                    <img src="image/applyPay_image.png" alt="applepay">
+    
+                    <div class="paymentMethod_special">
+                        <img src="image/tng_image.png" alt="tng">
+                        <img src="image/masterCard_image.png" alt="mastercard">
+                        <img src="image/myBank_image.png" >
+                    </div>
+                </div>
+    
+                <div class="logisticPartner">
+                    <p>Logistics Partner</p>
+                        <img src="image/ninjaVan_image.png" alt="ninjavan">
+                        <img src="image/jtExpress_image.png" alt="JT_Express">
+                        <img src="image/poslaju_image.png" alt="poslaju">
+    
+                    <div class="logisticPartner_special">
+                            <img src="image/fedex_image.png" alt="fedex">
+                            <img src="image/dhl_image.png" alt="dhl">
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <p>Follow Us</p>
+                    <a href="">Facebook</a>
+                    <a href="">Instagram</a>
+                    <a href="">Youtube</a>
+                </div>
+            </div>
+        </div>
+        <hr id="special">
+        <p id="term_content">Copyright 2023. Sunny Shop Mobile Malaysia Sdn. Bhd. [201501009497 (1134832-W)]. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        // Add your JavaScript code here
+        document.addEventListener("DOMContentLoaded", function () {
+            // Example: Handle button click event
+            var button = document.querySelector('.button');
+    
+            button.addEventListener('click', function () {
+                var inputText = document.querySelector('input[type="text1"]').value;
+                alert('Your message was sent! ');
+                // You can perform other actions based on the input value
+            });
+        });
+    </script>
+
+        
+    
+    
+    
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

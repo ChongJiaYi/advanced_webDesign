@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/722e303770.js" crossorigin="anonymous"></script>
+
+    <title>Hello, world!</title>
+    <style>
+        
+        body{
+          background-color:#FFF2F2;
+        }
+
+
+        .container{
+            display: flex;
+        }
+
+
+
+        .openfororder{
+            margin-left: 600px;
+            margin-top: 25px;
+        }
+
+        .circle{
+            width: 15px;
+            height: 15px;
+            background-color: green;
+            border-radius: 50%;
+            margin-left: 40px;
+            margin-top: 30px;
+        }
+
+        .bellicon,.stafficon{
+
+            font-size: 50px;
+            margin-top: 0px;
+            margin-left: 40px;
+
+        }
+
+        .container1{
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .staffname{
+            margin-left: 30px;
+            margin-top: 6px;
+        }
+
+        .staffname p{
+            margin-top: 10px;
+        }
+
+        .line{
+            height: 1px;
+            width: 1310px;
+            background-color: black;
+            margin-left: 25px;
+        }
+
+
+
+
+        ul{
+            list-style-type: none;
+            margin-left: 0px;
+            width: 200px;
+            background-color: white;
+            margin-top: 50px;
+            padding: 0;
+            text-align: center;
+        }
+
+        li a{
+            display: block;
+            color: black;
+            text-decoration: none;
+            padding: 10px 16px;
+        }
+
+        li a:hover{
+            background-color: #555;
+            color: white;
+        }
+
+        .smallwhiterect{
+            height: 140px;
+            width: 260px;
+            background-color: white;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+
+        .customer,.productsold,.revenue{
+            margin-top: 8px;
+            margin-left: 20px;
+            color: gray;
+            height: 10px;
+        }
+
+        .total{
+            margin-left: -10px;
+            color: black;
+        }
+
+        .chaticon,.boxicon,.revenueicon{
+            font-size: 30px;
+            margin-left: 100px;
+            
+        }
+
+        .plusnumber{
+            margin-left: 0px;
+            color: green;
+        }
+
+        .bigwhiterect{
+            width: 880px;
+            height: 350px;
+            background-color: white;
+            margin-left: 62px;
+            margin-top: 20px;
+        }
+
+
+        .bigwhiterect h1{
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        table{
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 98%;
+            margin-left: 10px;
+            
+        }
+
+        table td,th{
+            padding: 10px;
+        }
+
+        table th{
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+         
+        }
+
+  
+
+        .Header {
+    background-color: #E5E0FF;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 5px 20px;
+}
+
+.right_content {
+    display: flex;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    width: 400px;
+    background-color: #7286D3;
+    border-radius: 20px 0 0 20px;
+    /* Rounded left corners */
+}
+
+.search_bar button {
+    background-color: #7286D3;
+    border-radius: 0 20px 20px 0;
+    /* Rounded right corners */
+    margin-left: -2px;
+    font-size: 15px;
+}
+
+.left_content a,
+.icons a {
+    font-size: 35px;
+}
+
+.search_bar {
+    margin-right: 100px;
+}
+
+.search_bar a {
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#search_btn {
+    background-color: #7286D3;
+}
+
+.icons a {
+    margin-right: 50px;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E5E0FF;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    display: none;
+}
+
+.paymentMethod img , .logisticPartner img{
+    width: 50px;
+    height: 30px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.footer{
+    background-color: #7286D3;
+    margin-top: 30px;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left_content, .right_content{
+    display: flex;
+}
+
+.content a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+.content p, .paymentMethod p, .logisticPartner p{
+    font-size: 15px;
+    font-family: monospace;
+    text-decoration: underline;
+}
+
+#term_content{
+    background-color: #7286D3;
+    text-align: center;
+    font-family: 'Salsa', cursive;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+#special{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.content, .paymentMethod, .logisticPartner{
+    margin: 20px;
+}
+
+         /* mobile size */
+@media only screen and (max-width: 600px) {
+    .right_content {
+        display: none;
+    }
+
+    .left_content a {
+        font-size: 25px;
+    }
+
+    .menu {
+        float: right;
+        overflow: hidden;
+        display: block;
+    }
+
+    .menu i{
+        font-size: 25px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        z-index: 1;
+        flex-direction: column;
+        width: 100%;
+        top: 60px;
+        left: 0px;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .show {
+    display: block;
+    }
+
+
+    .paymentMethod,.logisticPartner {
+        display: none;
+    }
+    
+
+}
+
+        
+
+        
+
+        
+      
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="Header">
+        <div class="left_content">
+            <a href="homepage.html"><i class="fa-solid fa-house" style="color: #000000;"></i></a>
+        </div>
+
+        <div class="right_content">
+            <div class="search_bar">
+                <form action="#" class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Search"
+                    aria-label="Search">
+                    <button class="btn my-2 my-sm-0" type="button" id="search_btn" onclick="submitForm()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <a href="userProfile.html">My Profile</a>
+                <a href="voucher.html">My Voucher</a>
+                <a href="orderhistory.html">Order History</a>
+                <a href="review.html">My Review</a>
+                <a href="wishlist.html">Wishlist</a>
+            </div>
+
+            <div class="icons">
+                <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
+                <a href="userProfile.html"><i class="fa-regular fa-circle-user" style="color: #000000;"></i></a></a>
+            </div>
+        </div>
+
+        <div class="menu">
+            <a onclick="myFunction()" class="dropbtn"><i class="fa-solid fa-bars" style="color: #000000;"></i></a>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="userProfile.html">My Profile</a>
+                <a href="voucher.html">My Voucher</a>
+                <a href="orderhistory.html">Order History</a>
+                <a href="review.html">My Review</a>
+                <a href="wishlist.html">Wishlist</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+                }
+            }
+    }
+
+    function submitForm() {
+            var searchInput = document.getElementById('searchInput').value;
+            alert('Search submitted!\nSearch Term: ' + searchInput);
+        }
+    </script>
+
+    <div class="container">
+
+        <div class="openfororder">
+            <p>Open For Order</p>
+        </div>
+
+        <div class="circle"></div>
+
+        <div class="bellicon">
+            <i class="fa-regular fa-bell" style="color: #000000;"></i>
+        </div>
+
+        <div class="stafficon">
+            <i class="fa-regular fa-circle-user" style="color: #b18cfe;"></i>
+        </div>
+
+        <div class="staffname">
+            <p>XXXXXX<br>Staff Admin</p>
+        </div>
+
+    </div>
+    
+    <div class="line"></div>
+
+    <div class="container">
+
+    <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#customer">Customer</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#stock">Stock</a></li>
+        <li><a href="chat.html">Message</a></li>
+        <li><a href="#trackorder">Track Order</a></li>
+    </ul>
+
+<div class="container1">
+
+    <div class="container">
+        <div class="smallwhiterect">
+            <div class="customer">
+                <p>Customer</p>
+
+                <div class="container">
+                    <div class="total">
+                        <h2>214</h2>
+                    </div>
+
+                    <div class="chaticon">
+                        <i class="fa-solid fa-headset" style="color: #b18cfe;"></i>
+                    </div>
+
+                </div>
+
+            
+
+                <div class="plusnumber">
+                    <p>+ 12 customer at last week</p>
+                </div>
+
+               
+            </div>
+
+
+        </div>
+
+        <div class="smallwhiterect">
+            <div class="productsold">
+                <p>Product Sold</p>
+
+                <div class="container">
+                    <div class="total">
+                        <h2>1540</h2>
+                    </div>
+
+                    <div class="boxicon">
+                        <i class="fa-solid fa-box" style="color: #b18cfe;"></i>
+                    </div>
+                </div>
+
+                <div class="plusnumber">
+                    <p>+ 10 Average Sales Per Week</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="smallwhiterect">
+            <div class="revenue">
+                <p>Revenue</p>
+
+                <div class="container">
+                    <div class="total">
+                        <h2>3400</h2>
+                    </div>
+
+                    <div class="revenueicon">
+                        <i class="fa-solid fa-chart-line" style="color: #b18cfe;"></i>
+                    </div>
+                </div>
+
+                <div class="plusnumber">
+                    <p>+ 20% Average Sales Per Week</p>
+                </div>
+
+            </div>
+            
+
+        </div>
+
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>This is a modal. Add your modal content here.</p>
+        </div>
+    </div>
+
+
+    
+
+    <div class="bigwhiterect">
+
+        <h1>Recent Order</h1>
+        <table>
+            <tr>
+                <th>Customer ID</th>
+                <th>Order Datetime</th>
+                <th>Order ID</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>CID10975738989</td>
+                <td>10-10-2023 10:30</td>
+                <td>#1234567SYU98</td>
+                <td>Canceled</td>
+            </tr>
+
+            <tr>
+                <td>CID98765430875</td>
+                <td>20-03-2023 16:20</td>
+                <td>#097468EYDH87</td>
+                <td>Completed</td>
+            </tr>
+
+            <tr>
+                <td>CID35823749298</td>
+                <td>17-10-2023 09:30</td>
+                <td>#07653456HDYE</td>
+                <td>In Progress</td>
+            </tr>
+
+            <tr>
+                <td>CID63842648228</td>
+                <td>12-09-2023 13:20</td>
+                <td>#2456189YTH29</td>
+                <td>Completed</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+     
+
+    </div>
+
+
+    </div>
+
+
+
+ 
+
+            
+    <div class="footer">
+        <div class="box">
+            <div class="left_content">
+                <div class="content">
+                    <p>Category</p>
+                    <a href="productDetails_Men.html">Men's Cloth</a>
+                    <a href="productDetails_Women.html">Women's Cloth</a>
+                </div>
+    
+                <div class="content">
+                    <p>About Store</p>
+                    <a href="voucher.html">Voucher</a>
+                    <a href="">Promotion</a>
+                </div>
+    
+                <div class="content">
+                    <p>Customer Info</p>
+                    <a href="wishlist.html">Wishlist</a>
+                    <a href="return.html">Return & Refund</a>
+                    <a href="">Customer Service</a>
+                </div>
+            </div>
+    
+            <div class="right_content">
+                <div class="paymentMethod">
+                    <p>Payment Method</p>
+                    <img src="image/fpx_image.png" alt="fpx">
+                    <img src="image/visa_image.png" alt="visa">
+                    <img src="image/applyPay_image.png" alt="applepay">
+    
+                    <div class="paymentMethod_special">
+                        <img src="image/tng_image.png" alt="tng">
+                        <img src="image/masterCard_image.png" alt="mastercard">
+                        <img src="image/myBank_image.png" >
+                    </div>
+                </div>
+    
+                <div class="logisticPartner">
+                    <p>Logistics Partner</p>
+                        <img src="image/ninjaVan_image.png" alt="ninjavan">
+                        <img src="image/jtExpress_image.png" alt="JT_Express">
+                        <img src="image/poslaju_image.png" alt="poslaju">
+    
+                    <div class="logisticPartner_special">
+                            <img src="image/fedex_image.png" alt="fedex">
+                            <img src="image/dhl_image.png" alt="dhl">
+                    </div>
+                </div>
+    
+                <div class="content">
+                    <p>Follow Us</p>
+                    <a href="">Facebook</a>
+                    <a href="">Instagram</a>
+                    <a href="">Youtube</a>
+                </div>
+            </div>
+        </div>
+        <hr id="special">
+        <p id="term_content">Copyright 2023. Sunny Shop Mobile Malaysia Sdn. Bhd. [201501009497 (1134832-W)]. All Rights Reserved.</p>
+    </div>
+
+        
+
+        
+    
+    
+    
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        
+        function openNotification() {
+        // Add code to display notifications
+        alert("New notification!");
+    }
+
+    function openModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        var modal = document.getElementById("myModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
